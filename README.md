@@ -98,35 +98,7 @@ There are config/dot files that are common and unlikely to be nestable. These ar
 
 ## Alternative directory names
 
-Here are some alternative ideas for the config directory name collected from several places.
-
-### `.config/` (current proposal)
-
-Config directory indicates it holds the configuration files by their name and is a refactored part of the common `.config` suffix in current config file names.
-
-It is prefixed with a dot `.` so that it will be sorted as the first directory and more clearly separated from the rest of the project, reducing more noise. Also is consistent with [XDG](https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html)'s `~/.config` directory.
-
-### `.conf/`
-
-Before writing this proposal I had been thinking of `.conf/` as a shorter alternative. As a drawback, this name is less readable.
-
-### `.meta/`
-
-[@barelyreaper](https://twitter.com/barelyreaper) suggested in a [tweet](https://twitter.com/barelyreaper/status/1757385448266355025) to use `.meta/` since most of the (current) config files have `.config` in their name and with a more generic place like `.meta/` we can put other kinds of dotfiles such as `prettierignore` in it. 
-
-### `config/`
-
-[@nainemom](https://github.com/nainemom) suggested using the `config` directory instead of `.config` so that it won't be hidden in Unix tools. ([discussion](https://github.com/pi0/config-dir/issues/1))
-
-### `package.json`
-
-[@jullerino](https://twitter.com/jullerino) suggested in a [tweet](https://twitter.com/remcohaszing/status/1757488879362310406) to prefer `package.json` that is also useful for monorepos. [@remcohaszing](https://twitter.com/remcohaszing/) has some [interesting points](https://twitter.com/remcohaszing/status/1757488651812897131) why this might not always work.
-
-## VSCode file nesting
-
-Visual Studio Code, [introduced]((https://code.visualstudio.com/updates/v1_64#_explorer-file-nesting)) a new experimental feature called "file nesting" that allows displaying the same directory in a logically nested layout. Using a preset like [`antfu/vscode-file-nesting-config`](https://github.com/antfu/vscode-file-nesting-config) it is possible to virtually organize config files into an alternative structure.
-
-While this feature can serve as a good workaround for the current situation, it doesn't solve the real problem. Actual files are still stored in the top-level directory in an unorganized manner. When browsing project code in other tools, like File Explorer, Github, or Gitlab, they are still not nested.
+Please see [this discussion](https://github.com/pi0/config-dir/discussions/3).
 
 ## Inspirations
 
