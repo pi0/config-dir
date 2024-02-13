@@ -23,17 +23,18 @@ This proposal aims to introduce a new conventional place for storing configurati
 
 When the `.config/` directory exists, tools read the config files inside this directory.
 
+Usually, tools should use `<dir>/.config/[name].[ext]` for file name convention.
+
 ### Nesting
 
 As the size of the configuration increases, managing them all in a single configuration will be harder. Tools can optionally support `.config/[name]/` to allow nesting.
 
-In the case of mono repo when users need to specify multiple files of the same config, the config files can be nested into `/<path>/.config` directory and based on the tool requirements either merged with mono repo's `/.config` or not.
+In the case of monorepo when users need to specify multiple files of the same config, the config files can be nested into `/<path>/.config` directory and based on the tool requirements either merged with mono repo's `/.config` or not.
 
 ### Conventions
 
 While this proposal does not enforce the naming convention of files inside this dir, it provides some  recommendations and best practices.
 
-Usually, tools should use `<dir>/.config/[name].[ext]` for file name convention.
 
 #### Specify tool name
 
@@ -53,6 +54,7 @@ Since the `.config` directory name is already clear it is holding configuration 
 ✅ .config/toolname.js
 
 ❌ .config/toolconf.js
+
 ❌ .config/toolname.config.js
 ```
 
@@ -67,6 +69,7 @@ Config files without clear extensions are harder to be parsed. Both by IDEs and 
 ✅ .config/toolname.toml
 
 ❌ .config/toolname
+
 ❌ .config/toolrc
 ```
 
@@ -109,11 +112,15 @@ Before writing this proposal I had been thinking of `.conf/` as a shorter altern
 
 ### `.meta/`
 
-[@barelyreaper](https://twitter.com/barelyreaper) [suggested](https://twitter.com/barelyreaper/status/1757385448266355025) to use `.meta/` since most of the (current) config files have `.config` in their name and with a more generic place like `.meta/` we can put other kinds of dotfiles such as `prettierignore` in it.
+[@barelyreaper](https://twitter.com/barelyreaper) suggested in a [tweet](https://twitter.com/barelyreaper/status/1757385448266355025) to use `.meta/` since most of the (current) config files have `.config` in their name and with a more generic place like `.meta/` we can put other kinds of dotfiles such as `prettierignore` in it. 
 
 ### `config/`
 
-[@nainemom](https://github.com/nainemom) [suggested](https://github.com/pi0/config-dir/issues/1) to use the `config` directory instead of `.config` so that it won't be hidden in Unix tools.
+[@nainemom](https://github.com/nainemom) suggested using the `config` directory instead of `.config` so that it won't be hidden in Unix tools. ([discussion](https://github.com/pi0/config-dir/issues/1))
+
+### `package.json`
+
+[@jullerino](https://twitter.com/jullerino) suggested in a [tweet](https://twitter.com/remcohaszing/status/1757488879362310406) to prefer `package.json` that is also useful for monorepos. [@remcohaszing](https://twitter.com/remcohaszing/) has some [interesting points](https://twitter.com/remcohaszing/status/1757488651812897131) why this might not always work.
 
 ## VSCode file nesting
 
@@ -125,7 +132,7 @@ While this feature can serve as a good workaround for the current situation, it 
 
 I was inspired by seeing [tweet](https://twitter.com/DanaWoodman/status/1699134345196495182) by Dana Woodman about this problem a few months ago and while he was [convienced](https://twitter.com/DanaWoodman/status/1699535674867949905) to use file nesting, the real problem still exists with actual files not being organized!
 
-[cosmiconfig](https://github.com/cosmiconfig/cosmiconfig) is a configuration loader for JavaScript that supports `.config/[name].[ext]` out of the box. (Thanks to @[KubaJastrz](https://github.com/KubaJastrz) for reference to it).
+[cosmiconfig](https://github.com/cosmiconfig/cosmiconfig) is a configuration loader for JavaScript that supports `.config/[name].[ext]` out of the box. (Thanks to [@KubaJastrz](https://github.com/KubaJastrz) for reference to it).
 
 ## Current efforts
 
