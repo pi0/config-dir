@@ -17,65 +17,68 @@ This makes things harder than they should be:
 
 ## Goal
 
-This proposal aims to introduce a new conventional place for storing configuration files and **encourage** tool authors to support it.
+This proposal aims to introduce a new conventional place for storing configuration files and motivate tool authors to support it.
 
-Migrating to a new convention is understandably a complex process. This proposal encourages to use of the config dir convention as an **alternative** method while allowing top-level conventions.
-
-Tool authors shall decide to encourage the users to use an organized configuration directory and prefer it as the canonical place.
+Migrating to a new convention is understandably a complex process. This proposal encourages to use of the config dir convention as an alternative method while allowing top-level conventions for pre-existing tools.
 
 ## `.config/` directory
 
-When the `.config/` directory exists, tools shall respect the config files inside it and use them.
-
-Tools should use `<dir>/.config/[name].[ext]` for their
+When the `.config/` directory exists, tools read the config files inside this directory. 
 
 ### Nesting
 
-As the number of configuration options increases, managing them all in a single configuration will be impossible.
+As the number of configuration options increases, managing them all in a single configuration will be impossible. Tools can optionally support `.config/[name]/` to allow nesting.
 
 ## Conventions
 
 While this proposal does not enforce the naming convention of files inside this dir, this proposal provides some conventional recommendations and best practices.
+
+Usually, tools should use `<dir>/.config/[name].[ext]` for file name convention.
 
 ### Specify tool name
 
 Tool or framework names should be explicitly clear in configuration file names to avoid conflicting tools with each other and also make it clear for users what config is for what.
 
 ✅ `.config/toolname.js`
+
 ❌ `.config/app.js`
 
 ### Avoid the `.config` and `.conf` suffix
 
-Since the `.config` directory name is already clear it is holding configuration files, the `.config` suffix is not needed and shall be avoided
-
-> [!NOTE]
-> To make the migration process easier for end-users (ie: drag and drop from the top level to the `.config` directory), tools shall allow this suffix but also encourage users to not use it.
+Since the `.config` directory name is already clear it is holding configuration files, the `.config` suffix is not needed and shall be avoided.
 
 ✅ `.config/toolname.js`
-⚠️ `.config/toolconf.js`
-⚠️ `.config/toolname.config.js`
+
+❌ `.config/toolconf.js`
+
+❌ `.config/toolname.config.js`
+
+> [!NOTE]
+> To make the migration to the `.config` directory process easier and keep the existing file name conventions, tools might allow this suffix as alternative.
 
 ### Specify format with extension
 
 Config files without clear extensions are harder to be parsed. Both by IDEs and other tools and also for end-users to understand.
 
+✅ `.config/toolname.toml`
+
+❌ `.config/toolname`
+
+❌ `.config/toolrc`
+
 > [!NOTE]
 > We discourage using the `rc` format because the interpretation is ambiguous.
-
-✅ `.config/toolname.toml`
-❌ `.config/toolname`
-❌ `.config/toolrc`
 
 ### Lower-case
 
 Using case-sensitive configuration file names can introduce cross-platform support issues. It is highly recommended to only use lowercase naming.
 
-> [!NOTE]
-> This proposal recommends using the kebab case if the tool name is too long `tool-name.json` instead of a camel case like `tool_name.json` to preserve consistency in this directory.
-
 ✅ `.config/toolname.toml`
+
 ❌ `.config/toolName`
 
+> [!NOTE]
+> This proposal recommends using the kebab case if the tool name is too long `tool-name.json` instead of a camel case like `tool_name.json` to preserve consistency in this directory.
 
 ## Alternative directory names
 
