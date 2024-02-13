@@ -17,7 +17,7 @@ This makes things harder than they should be:
 
 ## Goal
 
-This proposal aims to introduce a new conventional place for storing configuration files and motivate different tools to support it as a new alternative standard while allowing top-level conventions same as before.
+This proposal aims to introduce a new conventional place for storing configuration files and motivate different tools to support it as a new alternative standard while allowing top-level conventions the same as before.
 
 ## `.config/` directory
 
@@ -25,7 +25,9 @@ When the `.config/` directory exists, tools read the config files inside this di
 
 ### Nesting
 
-As the number of configuration options increases, managing them all in a single configuration will be impossible. Tools can optionally support `.config/[name]/` to allow nesting.
+As the size of the configuration increases, managing them all in a single configuration will be harder. Tools can optionally support `.config/[name]/` to allow nesting.
+
+In the case of mono repo when users need to specify multiple files of the same config, the config files can be nested into `/<path>/.config` directory and based on the tool requirements either merged with mono repo's `/.config` or not.
 
 ### Conventions
 
