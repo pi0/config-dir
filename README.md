@@ -96,21 +96,14 @@ There are config/dot files that are common and unlikely to be nestable. These ar
 - `.env`
 - `.gitignore`
 
-## Alternative directory names
+## Discussions
 
-Please see [this discussion](https://github.com/pi0/config-dir/discussions/3).
+> [!NOTE]
+> More discussions related to this proposal, are moved under the [Discussions](https://github.com/pi0/config-dir/discussions) section.
 
-## Inspirations
-
-Please see [this discussion](https://github.com/pi0/config-dir/discussions/5).
-
-## Current efforts
-
-### `unjs/c12`
-
-[unjs/c12](https://github.com/unjs/c12) is a configuration loader for JavaScript used by [Nuxt](https://nuxt.com/), [Nitro](https://nitro.unjs.io/) and [more](https://github.com/unjs/c12?tab=readme-ov-file#-used-by) projects.
-
-Config directory support is planned as an opt-in feature ([tracker issue](https://github.com/unjs/c12/issues/134)).
+- [Alternative directory names](https://github.com/pi0/config-dir/discussions/3)
+- [Inspirations](https://github.com/pi0/config-dir/discussions/5)
+- [Current efforts](https://github.com/pi0/config-dir/discussions/6)
 
 ## Next steps
 
