@@ -102,9 +102,7 @@ Please see [this discussion](https://github.com/pi0/config-dir/discussions/3).
 
 ## Inspirations
 
-I was inspired by seeing [tweet](https://twitter.com/DanaWoodman/status/1699134345196495182) by Dana Woodman about this problem a few months ago and while he was [convienced](https://twitter.com/DanaWoodman/status/1699535674867949905) to use file nesting, the real problem still exists with actual files not being organized!
-
-[cosmiconfig](https://github.com/cosmiconfig/cosmiconfig) is a configuration loader for JavaScript that supports `.config/[name].[ext]` out of the box. (Thanks to [@KubaJastrz](https://github.com/KubaJastrz) for reference to it).
+Please see [this discussion](https://github.com/pi0/config-dir/discussions/5).
 
 ## Current efforts
 
