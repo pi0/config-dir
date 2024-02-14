@@ -24,9 +24,9 @@ This proposal aims to introduce a new conventional place for storing configurati
 > [!NOTE]
 > More discussions related to this proposal, are moved under the [Discussions](https://github.com/pi0/config-dir/discussions) section.
 
-- [Alternative directory names](https://github.com/pi0/config-dir/discussions/3)
-- [Previous efforts](https://github.com/pi0/config-dir/discussions/5)
-- [Tools currently support `.config`](https://github.com/pi0/config-dir/discussions/6)
+- [`.config` dir support tracker](https://github.com/pi0/config-dir/discussions/6)
+- [previous efforts](https://github.com/pi0/config-dir/discussions/5)
+- [alternative directory names](https://github.com/pi0/config-dir/discussions/3)
 
 ## `.config/` directory
 
