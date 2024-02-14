@@ -19,6 +19,15 @@ This makes things harder than they should be:
 
 This proposal aims to introduce a new conventional place for storing configuration files and motivate different tools to support it as a new alternative standard while allowing top-level conventions the same as before.
 
+## Discussions
+
+> [!NOTE]
+> More discussions related to this proposal, are moved under the [Discussions](https://github.com/pi0/config-dir/discussions) section.
+
+- [Alternative directory names](https://github.com/pi0/config-dir/discussions/3)
+- [Previous efforts](https://github.com/pi0/config-dir/discussions/5)
+- [Tools currently support `.config`](https://github.com/pi0/config-dir/discussions/6)
+
 ## `.config/` directory
 
 When the `.config/` directory exists, tools read the config files inside this directory.
@@ -95,15 +104,6 @@ There are config/dot files that are common and unlikely to be nestable. These ar
 
 - `.env`
 - `.gitignore`
-
-## Discussions
-
-> [!NOTE]
-> More discussions related to this proposal, are moved under the [Discussions](https://github.com/pi0/config-dir/discussions) section.
-
-- [Alternative directory names](https://github.com/pi0/config-dir/discussions/3)
-- [Inspirations](https://github.com/pi0/config-dir/discussions/5)
-- [Current efforts](https://github.com/pi0/config-dir/discussions/6)
 
 ## Next steps
 
