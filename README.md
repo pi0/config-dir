@@ -96,7 +96,7 @@ Using case-sensitive configuration file names can introduce cross-platform suppo
 ```
 
 > [!NOTE]
-> This proposal recommends using the kebab case if the tool name is too long `tool-name.json` instead of a camel case like `tool_name.json` to preserve consistency in this directory.
+> This proposal recommends using the kebab case if the tool name is too long `tool-name.json` instead of a snake case like `tool_name.json` to preserve consistency in this directory.
 
 ## Exceptional files
 
