@@ -15,6 +15,14 @@ This makes things harder than they should be:
 - For tools to distinguish config files
 - For library authors to decide on where to store or load configs
 
+Some tools offer command line options or environment variables for setting a non-default path to their config files.
+This is not a proper replacement for a standardized default lookup directory, because the tool might be invoked from a number of contexts and shipping configuration for them all (including unknown ones!) in projects does not scale, nor is it possible for some cases. Such contexts include, but are not limited to:
+
+- Different editors and IDE's
+- SCM commit hooks and different manager tools for them
+- Plain command line usage, including one-off runs
+- CI/CD environments
+
 ## Goal
 
 This proposal aims to introduce a new conventional place for storing configuration files and motivate different tools to support it as a new alternative standard while allowing top-level conventions the same as before.
